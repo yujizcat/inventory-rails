@@ -8,12 +8,12 @@ class  CategoriesController < ApplicationController
     end
 
     def show
-        render json: @categories
+        render json: @category
     end
 
     def create
-
-        @category = Category.new(params.require(:category).permit(:category))
+        @category = Category.new(category_params)
+        #@category = Category.new(params.require(:category).permit(:category))
         @category.save
         render json: @category
         
@@ -33,7 +33,7 @@ class  CategoriesController < ApplicationController
     
 
     def category_params
-        params.require(:category).permit(:category)
+        params.require(:category).permit(:category, :name)
     end
 
 end

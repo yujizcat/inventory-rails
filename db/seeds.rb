@@ -23,6 +23,12 @@ test_inventory = Inventory.new({
 
 test_inventory.save
 
+test_cate = Category.new({
+    category: "fooood"
+})
+
+test_cate.save
+
 if (test_inventory)
     puts "Inventory create"
 end
