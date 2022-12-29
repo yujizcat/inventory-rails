@@ -33,6 +33,12 @@ class InventoriesController < ApplicationController
         render json: @inventory 
     end
 
+    def destroyAll
+        @inventories = Inventory.all
+        @inventories.destroy
+        render json: @inventories
+    end
+
     private
 
     def set_inventory

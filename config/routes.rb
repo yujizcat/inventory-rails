@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "inventories/:id/edit", to: "inventories#edit"
   patch "inventories/:id", to: "inventories#update"
   delete "inventories/:id", to: "inventories#destroy"
+  delete "inventories", to: "inventories#destroyAll"
   get "categories", to: "categories#index"
   get "categories/:id", to: "categories#show"
   post "categories", to:  "categories#create"
