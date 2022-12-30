@@ -24,8 +24,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_30_110217) do
     t.string "category"
     t.boolean "sale"
     t.string "description"
-    t.boolean "shopping"
-    t.boolean "bought"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
