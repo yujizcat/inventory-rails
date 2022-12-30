@@ -13,11 +13,10 @@ class  CategoriesController < ApplicationController
 
     def create
         @category = Category.new(category_params)
-        #@category = Category.new(params.require(:category).permit(:category))
         @category.save
         render json: @category
-        
     end
+
 
     def destroy
         @category = Category.find(params[:id])
