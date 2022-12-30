@@ -8,27 +8,3 @@
 
 puts "Seed working"
 
-
-#Inventory.destroy_all
-
-
-test_inventory = Inventory.new({
-    item: "item2",
-    units: rand(1..100),
-    price: rand(1..100),
-    category: "Book",
-    sale: true,
-    description: "this is a item2"
-})
-
-test_inventory.save
-
-test_cate = Category.new({
-    category: "fooood"
-})
-
-test_cate.save
-
-if (test_inventory)
-    puts "Inventory create"
-end
