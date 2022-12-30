@@ -35,7 +35,7 @@ class InventoriesController < ApplicationController
 
     def destroyAll
         @inventories = Inventory.all
-        @inventories.destroy
+        @inventories.destroy_all
         render json: @inventories
     end
 
