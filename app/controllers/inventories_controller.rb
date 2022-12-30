@@ -21,10 +21,6 @@ class InventoriesController < ApplicationController
         
     end
 
-    def faker
-        @inventory = Inventory.create({item: "testt", units: 7, price: 1400, category: "None", sale=false, description: "gdfgdf", shopping: false, bought: false})
-    end
-
     def update
         @inventory = Inventory.find(params[:id])
         @inventory.update(inventory_params)
