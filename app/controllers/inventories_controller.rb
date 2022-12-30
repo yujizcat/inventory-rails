@@ -39,6 +39,13 @@ class InventoriesController < ApplicationController
         render json: @inventories
     end
 
+    def add_to_cart
+        @inventory = Inventory.find(params[:id])
+        @carts = CartsController.index
+        @carts.add_cart(@inventory)
+        @carts.save
+    end
+
     private
 
     def set_inventory

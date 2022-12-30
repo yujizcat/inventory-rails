@@ -25,6 +25,7 @@ class  CategoriesController < ApplicationController
         render json: @category 
     end
 
+
     private
 
     def set_category
