@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_30_110217) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_30_162028) do
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,6 +26,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_30_110217) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "shopping"
+    t.boolean "bought"
   end
 
 end
