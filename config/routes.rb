@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "inventories/:id", to: "inventories#show"
   get "inventories/new", to: "inventories#new"
   post "inventories", to: "inventories#create"
-  post "inventories", to: "inventories#faker"
+  post "inventories/faker", to: "inventories#faker"
   get "inventories/:id/edit", to: "inventories#edit"
   patch "inventories/:id", to: "inventories#update"
   delete "inventories/:id", to: "inventories#destroy"
