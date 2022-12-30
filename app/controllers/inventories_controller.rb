@@ -15,7 +15,7 @@ class InventoriesController < ApplicationController
 
     def create
         #@inventory = Inventory.new(params[:inventory])
-        @inventory = Inventory.new(params.require(:inventory).permit(:item, :units, :price, :category, :sale, :description))
+        @inventory = Inventory.new(params.require(:inventory).permit(:item, :units, :price, :category, :sale, :description, :shopping, :bought))
         @inventory.save
         render json: @inventory
         
@@ -54,7 +54,7 @@ class InventoriesController < ApplicationController
     
 
     def inventory_params
-        params.require(:inventory).permit(:item, :units, :price, :category, :sale, :description)
+        params.require(:inventory).permit(:item, :units, :price, :category, :sale, :description,  :shopping, :bought)
     end
 
    
