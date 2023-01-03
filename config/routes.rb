@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # resources :home
   # root "articles#index"
   get "home", to: "home#index"
+  get "user", to: "users#index"
   get "inventories", to: "inventories#index"
   get "inventories/:id", to: "inventories#show"
   get "inventories/new", to: "inventories#new"
