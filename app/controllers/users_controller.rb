@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-    before_action :set_user, only: [:show]
+    # before_action :set_user, only: [:index]
+    skip_before_action :verify_authenticity_token
 
     def index
-        @user = current_user
-        # @user.save!
-        render json: @user
+        @users = User.all
+        render json: @users
     end
 end
