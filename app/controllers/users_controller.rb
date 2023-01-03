@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
     def index
         @user = current_user
-        @user.save!
+        # @user.save!
         render json: @user
     end
 end
