@@ -1,6 +1,6 @@
 class InventoriesController < ApplicationController
 
-    before_action :set_inventory, only: [:show]
+    skip_before_action :set_inventory, only: [:show]
     skip_before_action :verify_authenticity_token
 
     def index
